@@ -14,10 +14,10 @@
         "key": "max_depth",
         "value": "3"
       },
-	  {
-	    "key": "api_key",
-		"value": "acp_machineLearning_customer"
-	  },
+      {
+        "key": "api_key",
+        "value": "acp_machineLearning_customer"
+      },
       {
         "key": "ACP_DSW_INPUT_FEATURES",
         "value": "date,store,storeType,storeSize,temperature,regionalFuelPrice,markdown,cpi,unemployment,isHoliday"
@@ -37,18 +37,17 @@
 	  {
         "key": "dataSetId",
         "value": "5c05ba9c7276150000be60f2"
-
       },
       {
         "key": "batchId",
         "value": "e1df7c83c030498685ce4e5f5072c179"
 
       },
-	  {
-	    "key": "timeframe",
+      {
+        "key": "timeframe",
         "value": "4000000"
-	  }
-	]
+      }
+    ]
   },
   {
     "name": "score",
@@ -63,14 +62,14 @@
         "value": "e1df7c83c030498685ce4e5f5072c179"
 
       },
-	  {
-	    "key": "api_key",
-		"value": "acp_machineLearning_customer"
-	  },
-	  {
-	    "key": "timeframe",
+      {
+        "key": "api_key",
+        "value": "acp_machineLearning_customer"
+      },
+      {
+        "key": "timeframe",
         "value": "4000000"
-	  }
+      }
     ]
   }
 ]
