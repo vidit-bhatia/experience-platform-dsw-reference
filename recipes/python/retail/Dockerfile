@@ -15,14 +15,14 @@
 # from Adobe.
 #####################################################################
 
-FROM adobe/acp-dsw-ml-runtime-python:0.20.1
+FROM ml-runtime-python:1.0.3
 
 #INSTALL modules needed by application
 RUN /usr/bin/python3.5 -m pip install -U numpy
 RUN /usr/bin/python3.5 -m pip install -U pandas
 RUN /usr/bin/python3.5 -m pip install -U sklearn
 RUN /usr/bin/python3.5 -m pip install -U scipy
-RUN /usr/bin/python3.5 -m pip install -U fastparquet
+RUN /usr/bin/python3.5 -m pip install -U fastparquet==0.2.1
 
 COPY dist/retail*.egg /application.egg
 

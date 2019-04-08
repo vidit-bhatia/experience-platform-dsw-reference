@@ -61,6 +61,15 @@ class Evaluator(AbstractEvaluator):
             df = prodreader.load(data_set_id=training_data_set_id,
                                  ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 
+        tenantId = configProperties.get("tenantId")
+        # Rename columns
+        df = df.rename({tenantId+'.cpi':'cpi', tenantId+'.date':'date', tenantId+'.isHoliday':'isHoliday', tenantId+'.markdown':'markdown',
+                        tenantId+'.regionalFuelPrice':'regionalFuelPrice', tenantId+'.store':'store', tenantId+'.storeSize':'storeSize',
+                        tenantId+'.storeType':'storeType', tenantId+'.temperature':'temperature', tenantId+'.unemployment':'unemployment',
+                        tenantId+'.weeklySales':'weeklySales'}, axis='columns')
+        #Drop id, eventType and timestamp
+        df.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
+
         #########################################
         # Data Preparation/Feature Engineering
         #########################################
