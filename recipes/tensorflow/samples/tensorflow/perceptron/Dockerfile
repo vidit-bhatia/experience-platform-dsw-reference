@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM [[Docker Image URL]]/ml-runtime-tensorflow:0.2.0
+FROM adobe/acp-dsw-ml-runtime-python:0.33.7
 WORKDIR /root/samples
 COPY . .
 RUN python setup.py install
